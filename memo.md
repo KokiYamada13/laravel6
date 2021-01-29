@@ -60,7 +60,18 @@ $roop->index
 
 
 #### blade
-- @if, @unless, @isset, @empty, @foeeach
+- @yield
+- @section
+- @extends
+- @component
+- @slot
+- @each
+- @inclode (部分的)
+- @if, @unless, @isset, @empty, @foeeach, @php
 
 #### memo
 - フォームで送信された値は、すべてnameのプロパティとして取り出せる。
+
+#### プロバイダー
+- php artisan make:provider HelloServiceProvider
+- config/app.phpに記述必要
