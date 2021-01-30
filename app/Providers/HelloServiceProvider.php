@@ -35,7 +35,7 @@ class HelloServiceProvider extends ServiceProvider
         //     'hello.index', 'App\Http\Composers\HelloComposer'
         // );
 
-        Validator::extends('hello', function($attribute, $value, $parameters, $validator) {
+        Validator::extend('hello', function($attribute, $value, $parameters, $validator) {
             return $value % 2 == 0;
         });
     }
