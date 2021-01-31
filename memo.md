@@ -79,3 +79,19 @@ $roop->index
 #### ミドルウェア
 - php artisan make:middleware HelloMiddleware
 - Kernel.phpに記述必要
+
+```
+DB_FOREIGN_KEYS=true
+DB_DATABASE=/Users/Koki/applaravel6/database/database.sqlite
+```
+```
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+-  php artisan migrate
+- php artisan make:seeder PeopleTableSeeder
+- php artisan db:seed
