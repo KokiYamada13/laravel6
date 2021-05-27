@@ -1,4 +1,8 @@
 @extends('layouts.helloapp')
+<style>
+    .pagination { font-size:10pt; }
+    .pagination li {display:inline-block }
+</style>
 
 @section('title', 'index')
 
@@ -8,8 +12,16 @@
 @endsection
 
 @section('content')
+    @if (Auth::check())
+        <p>USER: {{$user->name . '(' . $user->email . ')'}}</p>
+    @else
+    <p>※ろぐいんしていません（<a href="/login">ログイン</a>|<a href="/register">登録</a>）</p>
+    @endif
     <table>
         <tr>
+            <th>
+                Name
+            </th>
             <th>
                 Mail
             </th>
@@ -25,6 +37,7 @@
             </tr>
         @endforeach
     </table>
+    {{ $items->links() }}
 @endsection
 
 @section('footer')
